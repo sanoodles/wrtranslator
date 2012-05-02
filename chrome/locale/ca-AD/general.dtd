@@ -1,0 +1,29 @@
+<!ENTITY wrtranslator.translate.label "Tradueix">
+<!ENTITY wrtranslator.translate.accesskey "T">
+<!ENTITY wrtranslator.translateas.label "Tradueix com...">
+<!ENTITY wrtranslator.floatinglink.label "Enlla&#231; flotant">
+<!ENTITY wrtranslator.floatinglink.double "Al fer doble clic mostra l'enlla&#231; flotant">
+
+<!ENTITY wrtranslator.options "Opcions">
+<!ENTITY wrtranslator.language "Idioma">
+<!ENTITY wrtranslator.cancel "Cancel&#183;lar">
+<!ENTITY wrtranslator.accept "Acceptar">
+<!ENTITY wrtranslator.statusbar "Barra d'estat">
+<!ENTITY wrtranslator.statusbar.icon "Icona de barra d'estat">
+<!ENTITY wrtranslator.to "a">
+<!ENTITY wrtranslator.en "Angl&#232;s">
+<!ENTITY wrtranslator.es "Castell&#224;">
+<!ENTITY wrtranslator.fr "Franc&#232;s">
+<!ENTITY wrtranslator.it "Itali&#224;">
+<!ENTITY wrtranslator.pt "Portugu&#232;s">
+<!ENTITY wrtranslator.de "Alemany">
+<!ENTITY wrtranslator.ru "Rus">
+<!ENTITY wrtranslator.pl "Polac">
+<!ENTITY wrtranslator.ro "Roman&#232;s">
+<!ENTITY wrtranslator.cs "Txec">
+<!ENTITY wrtranslator.el "Grec">
+<!ENTITY wrtranslator.tr "Turc">
+<!ENTITY wrtranslator.zh "Xin&#232;s">
+<!ENTITY wrtranslator.jp "Japon&#232;s">
+<!ENTITY wrtranslator.ko "Kore&#224;">
+<!ENTITY wrtranslator.ar "&#192;rab">

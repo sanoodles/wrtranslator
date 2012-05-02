@@ -1,0 +1,32 @@
+<!-- 
+This localisation may be disastrous. Feedback to the author is always welcome.
+-->
+<!ENTITY wrtranslator.translate.label "Traduire">
+<!ENTITY wrtranslator.translate.accesskey "T">
+<!ENTITY wrtranslator.translateas.label "Traduire comme...">
+<!ENTITY wrtranslator.floatinglink.label "Lien flottant">
+<!ENTITY wrtranslator.floatinglink.double "Au faire double clic il montre il lien flottant">
+
+<!ENTITY wrtranslator.options "Options">
+<!ENTITY wrtranslator.language "Langue">
+<!ENTITY wrtranslator.cancel "Annulation">
+<!ENTITY wrtranslator.accept "OK">
+<!ENTITY wrtranslator.statusbar "Barre d'&#233;tat">
+<!ENTITY wrtranslator.statusbar.icon "Ic&#244;ne de barre d'&#233;tat">
+<!ENTITY wrtranslator.to "&#224;">
+<!ENTITY wrtranslator.en "Anglais">
+<!ENTITY wrtranslator.es "Espagnol">
+<!ENTITY wrtranslator.fr "Fran&#231;ais">
+<!ENTITY wrtranslator.it "Italien">
+<!ENTITY wrtranslator.pt "Portugais">
+<!ENTITY wrtranslator.de "Allemand">
+<!ENTITY wrtranslator.ru "Russe">
+<!ENTITY wrtranslator.pl "Polonais">
+<!ENTITY wrtranslator.ro "Roumain">
+<!ENTITY wrtranslator.cs "Tch&#232;que">
+<!ENTITY wrtranslator.el "Grecque">
+<!ENTITY wrtranslator.tr "Turc">
+<!ENTITY wrtranslator.zh "Chinois">
+<!ENTITY wrtranslator.jp "Japonais">
+<!ENTITY wrtranslator.ko "Cor&#233;en">
+<!ENTITY wrtranslator.ar "Arabe">

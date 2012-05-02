@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xul-overlay href="chrome://wrtranslator/content/genOverlay.xul"?>
+<!DOCTYPE overlay>
+<overlay id="wrtranslator-tboverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script src="thunderbird.js" type="application/x-javascript"/>
+         
+  <!-- Thunderbird main window (messageWindow.xul, messenger.xul) -->
+  <window id="messengerWindow">
+    <commandset id="mailCommands">
+      <command id="wrtranslator-command-translate"/>
+    </commandset>
+    <keyset id="mailKeys">
+      <key id="wrtranslator-key-translate"/>
+    </keyset>
+    <!-- Context menu -->
+    <menupopup id="mailContext">
+      <menuitem id="wrtranslator-context-translate"/>
+      <menu id="wrtranslator-context-translateas"/>
+    </menupopup>
+  </window>
+   
+  <!-- Thunderbird compose window (messengercompose.xul) -->
+  <window id="msgcomposeWindow">
+    <commandset id="composeCommands">
+      <command id="wrtranslator-command-translate"/>
+    </commandset>
+    <keyset id="tasksKeys">
+      <key id="wrtranslator-key-translate"/>
+    </keyset>
+    <!-- Context menu -->
+    <menupopup id="msgComposeContext">
+      <menuitem id="wrtranslator-context-translate"/>
+      <menu id="wrtranslator-context-translateas"/>
+    </menupopup>
+  </window>
+  
+  <!-- Common for both main (mailWindowOverlay.xul) and compose windows (messengercompose.xul) -->
+  <!-- Tools menu -->
+  <menupopup id="taskPopup">
+    <menuitem 
+        id="wrtranslator-tools-translate"
+        insertafter="devToolsSeparator,prefSep"/>
+  </menupopup>
+
+</overlay>

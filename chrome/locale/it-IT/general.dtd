@@ -1,0 +1,32 @@
+<!-- 
+This localisation may be disastrous. Feedback to the author is always welcome.
+-->
+<!ENTITY wrtranslator.translate.label "Tradurre">
+<!ENTITY wrtranslator.translate.accesskey "T">
+<!ENTITY wrtranslator.translateas.label "Tradurre come...">
+<!ENTITY wrtranslator.floatinglink.label "Allacci galleggiante">
+<!ENTITY wrtranslator.floatinglink.double "Facendo doppio click mostra allacci galleggiante">
+
+<!ENTITY wrtranslator.options "Opzioni">
+<!ENTITY wrtranslator.language "Lingua">
+<!ENTITY wrtranslator.cancel "Cancella">
+<!ENTITY wrtranslator.accept "OK">
+<!ENTITY wrtranslator.statusbar "Barra di stato">
+<!ENTITY wrtranslator.statusbar.icon "Icona barra di stato">
+<!ENTITY wrtranslator.to "al">
+<!ENTITY wrtranslator.en "Inglese">
+<!ENTITY wrtranslator.es "Spagnolo">
+<!ENTITY wrtranslator.fr "Francese">
+<!ENTITY wrtranslator.it "Italiano">
+<!ENTITY wrtranslator.pt "Portoghese">
+<!ENTITY wrtranslator.de "Tedesco">
+<!ENTITY wrtranslator.ru "Russo">
+<!ENTITY wrtranslator.pl "Polacco">
+<!ENTITY wrtranslator.ro "Rumeno">
+<!ENTITY wrtranslator.cs "Ceco">
+<!ENTITY wrtranslator.el "Greco">
+<!ENTITY wrtranslator.tr "Turco">
+<!ENTITY wrtranslator.zh "Cinese">
+<!ENTITY wrtranslator.jp "Giapponese">
+<!ENTITY wrtranslator.ko "Coreano">
+<!ENTITY wrtranslator.ar "Arabo">

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://wrtranslator/locale/general.dtd">
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="wrtranslator_prefwindow">
+ <script src="constants.js" type="application/x-javascript"/>
+ <prefpane id="wrtranslator-options" label="WR Translator &wrtranslator.options;">
+ 
+  <preferences>
+   <preference id="lang"
+     name="extensions.wrtranslator.language"
+     type="string"/>
+   <preference id="fl_enable"
+     name="extensions.wrtranslator.floating_link_enable"
+     type="bool"/>
+   <preference id="sb_visible"
+     name="extensions.wrtranslator.status_visible"
+     type="bool"/>
+  </preferences>
+
+  <groupbox>
+   <caption label="&wrtranslator.language;"/>
+   <menulist preference="lang">
+    <menupopup>
+      
+<menuitem disabled="true" label="&wrtranslator.en;"/>
+
+<menuitem value="en-es" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.es;"/>
+<menuitem value="es-en" label="&wrtranslator.es; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-fr" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.fr;"/>
+<menuitem value="fr-en" label="&wrtranslator.fr; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-it" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.it;"/>
+<menuitem value="it-en" label="&wrtranslator.it; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-de" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.de;"/>
+<menuitem value="de-en" label="&wrtranslator.de; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-ru" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.ru;"/>
+<menuitem value="ru-en" label="&wrtranslator.ru; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-pt" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.pt;"/>
+<menuitem value="pt-en" label="&wrtranslator.pt; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-pl" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.pl;"/>
+<menuitem value="pl-en" label="&wrtranslator.pl; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-ro" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.ro;"/>
+<menuitem value="ro-en" label="&wrtranslator.ro; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-cs" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.cs;"/>
+<menuitem value="cs-en" label="&wrtranslator.cs; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-el" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.el;"/>
+<menuitem value="el-en" label="&wrtranslator.el; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-tr" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.tr;"/>
+<menuitem value="tr-en" label="&wrtranslator.tr; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-zh" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.zh;"/>
+<menuitem value="zh-en" label="&wrtranslator.zh; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-jp" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.jp;"/>
+<menuitem value="jp-en" label="&wrtranslator.jp; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-ko" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.ko;"/>
+<menuitem value="ko-en" label="&wrtranslator.ko; &wrtranslator.to; &wrtranslator.en;"/>
+
+<menuitem value="en-ar" label="&wrtranslator.en; &wrtranslator.to; &wrtranslator.ar;"/>
+<menuitem value="ar-en" label="&wrtranslator.ar; &wrtranslator.to; &wrtranslator.en;"/>
+
+
+
+<menuitem disabled="true" label=""/>
+
+
+
+<menuitem disabled="true" label="&wrtranslator.es;"/>
+
+<menuitem value="es-fr" label="&wrtranslator.es; &wrtranslator.to; &wrtranslator.fr;"/>
+<menuitem value="fr-es" label="&wrtranslator.fr; &wrtranslator.to; &wrtranslator.es;"/>
+
+<menuitem value="es-pt" label="&wrtranslator.es; &wrtranslator.to; &wrtranslator.pt;"/>
+<menuitem value="pt-es" label="&wrtranslator.pt; &wrtranslator.to; &wrtranslator.es;"/>
+    
+    </menupopup>
+   </menulist>
+  </groupbox>
+
+  <groupbox>
+   <caption label="&wrtranslator.floatinglink.label;"/>
+   <checkbox preference="fl_enable" label="&wrtranslator.floatinglink.double;"/>
+  </groupbox>
+
+  <groupbox>
+   <caption label="&wrtranslator.statusbar;"/>
+   <checkbox preference="sb_visible" label="&wrtranslator.statusbar.icon;"/>
+  </groupbox>
+  
+ </prefpane>
+</prefwindow>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://wrtranslator/locale/general.dtd">
+<overlay 
+    id="wrtranslator-genoverlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <script src="constants.js" type="application/x-javascript"/>
+  <script src="genOverlay.js" type="application/x-javascript"/>
+
+  <!-- X commandset -->
+    <command
+        id="wrtranslator-command-translate" 
+        oncommand="wrtranslator.onMenuItemCommand(event, '');"/>
+  
+  <!-- X keyset -->
+    <key
+        id="wrtranslator-key-translate" 
+        key="D" 
+        command="wrtranslator-command-translate"/>
+  
+  <!-- X Tools menu -->
+    <menuitem
+        id="wrtranslator-tools-translate" 
+        accesskey="&wrtranslator.translate.accesskey;" 
+        key="wrtranslator-key-translate" 
+        label="&wrtranslator.translate.label;" 
+        command="wrtranslator-command-translate"/>
+  
+  <!-- X Context menu -->
+    <menuitem
+        id="wrtranslator-context-translate" 
+        label="&wrtranslator.translate.label;" 
+        command="wrtranslator-command-translate"/>
+    <menu
+        id="wrtranslator-context-translateas" 
+        label="&wrtranslator.translateas.label;">
+        <menupopup id="wrtranslator-popup-translateas"/>
+    </menu>
+
+  <!-- X Status bar -->
+    <statusbar id="status-bar" class="chromeclass-status">
+      <statusbarpanel id="wrtranslator-status" label="WR"
+          tooltiptext="WordReference Translator"
+          onclick="wrtranslator.statusClick(event)"/>
+    </statusbar>
+  
+</overlay>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <!-- http://developer.mozilla.org/en/docs/install.rdf -->
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>{4095283b-2f11-42cf-a805-803c7001ffd9}</em:id>
+    <em:version>1.6.8</em:version>
+<!--
+    Notes for developers:
+
+    Adding translation languages:
+    - content/constants.js
+        - add corresponding positions to arrays
+    - content/options.xul
+        - add corresponding items to language groups
+
+    Adding application languages (localisations):
+    - locale/
+        - add language's directory
+            - add and fill file general.dtd
+            - add and fill file string.properties
+    - chrome.manifest
+        - add corresponding line
+-->
+    <em:type>2</em:type>
+    <em:name>WordReference Translator</em:name>
+
+    <!-- targetApplication -->
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>11.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Thunderbird -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>11.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Optional Property Reference  -->
+    <em:localized>
+      <em:locale>en-US</em:locale>
+      <em:description>
+        Get the WordReference translation for the selected word.
+      </em:description>
+    </em:localized>
+    <em:localized>
+      <em:locale>es-ES</em:locale>
+      <em:description>
+        Obtén la traducción de WordReference para la palabra seleccionada.
+      </em:description>
+    </em:localized>
+    <em:creator>Samuel Gómez</em:creator>
+    <em:contributor>Pau Ferrer</em:contributor>
+    <em:optionsURL>chrome://wrtranslator/content/options.xul</em:optionsURL>
+    <!--
+      <em:aboutURL>chrome://wrtranslator/content/about.xul</em:aboutURL>
+      <em:iconURL>chrome://wrtranslator/skin/mainicon.png</em:iconURL>
+      <em:updateURL>http://wrtranslator.mozdev.org/update.rdf</em:updateURL>
+    -->
+
+  </Description>
+
+</RDF>

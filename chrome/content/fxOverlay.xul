@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xul-overlay href="chrome://wrtranslator/content/genOverlay.xul"?>
+<!DOCTYPE overlay>
+<overlay id="wrtranslator-fxoverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <script src="firefox.js" type="application/x-javascript"/>
+
+  <!-- (browser.xul) -->
+  
+  <!-- Firefox commandset -->
+  <commandset id="mainCommandSet">
+    <command id="wrtranslator-command-translate"/>
+  </commandset>
+
+  <!-- Firefox keyset -->
+  <keyset id="mainKeyset">
+    <key id="wrtranslator-key-translate"/>
+  </keyset>
+
+  <!-- Firefox Tools menu -->
+  <menupopup id="menu_ToolsPopup">
+    <menuitem 
+        id="wrtranslator-tools-translate" 
+        insertafter="devToolsSeparator"/>
+  </menupopup>
+
+  <!-- Firefox Context menu -->
+  <menupopup id="contentAreaContextMenu">
+    <menuitem id="wrtranslator-context-translate"/>
+    <menu id="wrtranslator-context-translateas"/>
+  </menupopup>
+  
+</overlay>
