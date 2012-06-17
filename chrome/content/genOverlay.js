@@ -270,7 +270,7 @@ var wrtranslator = {
         var lang = "";
         var m = null;
 
-        for (var i = 0; i < wrt_lang1_list.length; i++) {
+        for (var i = 0, max = wrt_lang1_list.length; i < max; i++) {
             lang1 = wrt_lang1_list[i];
             lang2 = wrt_lang2_list[i];
             lang = lang1 + "-" + lang2;
@@ -285,22 +285,25 @@ var wrtranslator = {
                 // https://developer.mozilla.org/en/XUL/Events
 
                 /*
-                 * Unsecure technique (used until 1.6.5), but works.
+                 * Unsecure technique used until 1.6.5
                  */
-                m.setAttribute("oncommand", "wrtranslator.onMenuItemCommand(event, '" + lang + "');");
+                // m.setAttribute("oncommand", "wrtranslator.onMenuItemCommand(event, '" + lang + "');");
+                
+                m.addEventListener(
+                    "command",
 
-                /*
-                 * Secure technique (used in 1.6.6), but does not work.
-                 *
-                 * It seems that "lang" is passed by reference, making all the
-                 * menuitems behave with the last written value for "lang",
-                 * which is "pt-es".
-                 */
-                /*
-                m.addEventListener("command", 
-						function(e) { wrtranslator.onMenuItemCommand(e, lang); }, 
-						false);
-                */
+                    // @see JavaScript The Good Parts 4.10 Closure
+                    function (lg) {
+
+                        // function with its own context (a different
+                        // value for "lg" each time)
+                        return function (e) {
+                            wrtranslator.onMenuItemCommand(e, lg);
+                        }
+                    }(lang),
+                    false
+                );
+                
             } else { 
 
                 // print separator
