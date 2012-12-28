@@ -399,7 +399,7 @@ var wrtranslator = {
                     link.href = this.getTranslationUri(selectedText, "");
                     link.target = "_blank";
                     var linkText = this.wrstrings.GetStringFromName("translateString");
-                    link.innerHTML = linkText;
+                    link.textContent = linkText;
                     
                     // add link to div
                     this.fl.appendChild(link);
