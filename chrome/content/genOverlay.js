@@ -179,7 +179,7 @@ var wrtranslator = {
         var uri = "http://www.wordreference.com/" +
                 urlspan +
                 text +
-                "#article";
+                "#articleHead";
           
         return uri;
     },
