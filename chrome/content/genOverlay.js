@@ -10,7 +10,7 @@ var wrtranslatorPrefObserver = {
         var prefService = Components.classes["@mozilla.org/preferences-service;1"]
                                     .getService(Components.interfaces.nsIPrefService);
         this._branch = prefService.getBranch("extensions.wrtranslator.");
-        this._branch.QueryInterface(Components.interfaces.nsIPrefBranch2);
+        this._branch.QueryInterface(Components.interfaces.nsIPrefBranch);
         this._branch.addObserver("", this, false);
     },
     unregister: function() {
