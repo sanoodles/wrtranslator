@@ -3,7 +3,7 @@
  * target application dependant functions.
  * common interface implemented for firefox.
  */
-var wrt_tarApp = {
+var wrtranslator_tarApp = {
 
 
 

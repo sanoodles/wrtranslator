@@ -6,18 +6,18 @@
  * https://developer.mozilla.org/en/Code_snippets/Preferences#Using_preference_observers
  */
 var wrtranslatorPrefObserver = {
-    register: function() {
+    register: function () {
         var prefService = Components.classes["@mozilla.org/preferences-service;1"]
                                     .getService(Components.interfaces.nsIPrefService);
         this._branch = prefService.getBranch("extensions.wrtranslator.");
         this._branch.QueryInterface(Components.interfaces.nsIPrefBranch);
         this._branch.addObserver("", this, false);
     },
-    unregister: function() {
+    unregister: function () {
         if(!this._branch) return;
         this._branch.removeObserver("", this);
     },
-    observe: function(aSubject, aTopic, aPrefName) {
+    observe: function (aSubject, aTopic, aPrefName) {
         if(aTopic != "nsPref:changed") return;
         wrtranslator.loadPrefs();
     }
@@ -50,7 +50,7 @@ var wrtranslator = {
      *  from https://addons.mozilla.org/es-ES/firefox/addon/5203
      *      http://babelwiki.babelzilla.org/index.php?title=Tutorials#How_to_localize_strings_included_in_a_.js_file
      */
-	wrstrings: Components.classes["@mozilla.org/intl/stringbundle;1"]
+	  wrstrings: Components.classes["@mozilla.org/intl/stringbundle;1"]
             .getService(Components.interfaces.nsIStringBundleService)
             .createBundle("chrome://wrtranslator/locale/strings.properties"),
 
@@ -79,7 +79,7 @@ var wrtranslator = {
      * @return the nsIPrefBranch of wrtranslator
      *    http://www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html
      */
-    getPrefs: function()
+    getPrefs: function ()
     {
         var res;
         res = Components.classes["@mozilla.org/preferences-service;1"]
@@ -91,23 +91,23 @@ var wrtranslator = {
     /**
      * @return get floating link enable
      */
-    getFLenable: function()
+    getFLenable: function ()
     {
-     return this.getPrefs().getBoolPref("floating_link_enable");
+        return this.getPrefs().getBoolPref("floating_link_enable");
     },
 
     /**
      * set floating link enable
      */
-    setFLenable: function(value)
+    setFLenable: function (value)
     {
-     return this.getPrefs().setBoolPref("floating_link_enable", value);
+        return this.getPrefs().setBoolPref("floating_link_enable", value);
     },
 
     /**
      * @return get floating link time
      */
-    getFLtime: function()
+    getFLtime: function ()
     {
         return this.getPrefs().getIntPref("floating_link_time");
     },
@@ -117,17 +117,17 @@ var wrtranslator = {
      *  http://developer.mozilla.org/en/docs/Adding_preferences_to_an_extension
      *  http://www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html
      */
-    getLang: function()
+    getLang: function ()
     {
         return this.getPrefs().getCharPref("language").toString();
     },
 
-    getStatusVisible: function()
+    getStatusVisible: function ()
     {
         return this.getPrefs().getBoolPref("status_visible");
     },
 
-    loadPrefs: function() {
+    loadPrefs: function () {
 
         // status bar icon
         if (this.getStatusVisible()) {
@@ -153,20 +153,20 @@ var wrtranslator = {
       *   created to avoid using an associative array
       *     http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array#Description
       */
-    lang2urlspan: function(_lang)
+    lang2urlspan: function (_lang)
     {
         var res = "";
         var i = 0;
 
-        while (_lang != (wrt_lang1_list[i] + "-" + wrt_lang2_list[i])) {
+        while (_lang != (wrtranslator_lang1_list[i] + "-" + wrtranslator_lang2_list[i])) {
             i++;
         }
-        res = wrt_urlspans_list[i];
+        res = wrtranslator_urlspans_list[i];
 
         return res;
     },
 
-    getTranslationUri: function(text, _lang)
+    getTranslationUri: function (text, _lang)
     {
         var urlspan = "";
         
@@ -194,7 +194,7 @@ var wrtranslator = {
      *
      */
 
-    thereIsSelectedText: function()
+    thereIsSelectedText: function ()
     {
         var res;
 
@@ -211,14 +211,14 @@ var wrtranslator = {
         return res;
     },
 
-    elem_is_password: function(elem)
+    elem_is_password: function (elem)
     {
         if (!elem.hasAttribute("type")) return false;
 
         return elem.getAttribute("type") == "password";
     },
 
-    getSelectedText: function()
+    getSelectedText: function ()
     {
         // https://developer.mozilla.org/en/XUL_Tutorial/Focus_and_Selection
         
@@ -261,7 +261,7 @@ var wrtranslator = {
      * populate the "Translate as ..." submenu
      *  browser.js::PHM_populateUndoSubmenu 
      */
-    populateLangsSubmenu: function(event)
+    populateLangsSubmenu: function (event)
     {
         var langPopup = document.getElementById("wrtranslator-popup-translateas");
         
@@ -270,9 +270,9 @@ var wrtranslator = {
         var lang = "";
         var m = null;
 
-        for (var i = 0, max = wrt_lang1_list.length; i < max; i++) {
-            lang1 = wrt_lang1_list[i];
-            lang2 = wrt_lang2_list[i];
+        for (var i = 0, max = wrtranslator_lang1_list.length; i < max; i++) {
+            lang1 = wrtranslator_lang1_list[i];
+            lang2 = wrtranslator_lang2_list[i];
             lang = lang1 + "-" + lang2;
 
             if (lang1 != "") {
@@ -320,7 +320,7 @@ var wrtranslator = {
     /*
      * shows and hides the Context Menu items when appropiate
      */
-    ContextShowHideItems: function(event)
+    ContextShowHideItems: function (event)
     {
         var visible = this.thereIsSelectedText();
 
@@ -346,7 +346,7 @@ var wrtranslator = {
     /*
      * Hide floating link 
      */
-    hideFL: function()
+    hideFL: function ()
     {
         if (this.fl_body != null && this.fl != null) {
             this.fl_body.removeChild(this.fl);
@@ -358,15 +358,15 @@ var wrtranslator = {
     /*
      * Sets the position of the floating link
      */
-    setFLpos: function(div, event) {       
+    setFLpos: function (div, event) {       
         div.style.left = event.clientX - 48 + "px";
-        div.style.top = event.clientY - wrt_tarApp.FLvoffset + "px";
+        div.style.top = event.clientY - wrtranslator_tarApp.FLvoffset + "px";
     },
     
     /*
      * Shows the floating link
      */
-    onDblClick: function(event)
+    onDblClick: function (event)
     {
         // floating content addtion from https://addons.mozilla.org/en-US/firefox/addon/10839
 
@@ -409,7 +409,7 @@ var wrtranslator = {
                     
                     // start count down for link hiding
                     this.timer.initWithCallback(
-                       {notify: function(timer) { wrtranslator.hideFL(); }},
+                       {notify: function (timer) { wrtranslator.hideFL(); }},
                        this.getFLtime(),
                        Components.interfaces.nsITimer.TYPE_ONE_SHOT);
 
@@ -438,7 +438,7 @@ var wrtranslator = {
      *
      */
 
-	statusClick: function(event) {
+	statusClick: function (event) {
 
         // left click
         if (event.button == 0) {
@@ -472,7 +472,7 @@ var wrtranslator = {
      *  if there is a word selected in the current tab, shows it in wordreference
      *  else, if there is a word selected in a textbox in the current tab, shows it in wordreference.
      */
-    onMenuItemCommand: function(event, _lang)
+    onMenuItemCommand: function (event, _lang)
     {
         /*
             pre:
@@ -486,7 +486,7 @@ var wrtranslator = {
         
         if (text != "") { 
             var uri = this.getTranslationUri(text, _lang);
-            wrt_tarApp.OpenURL(uri);
+            wrtranslator_tarApp.OpenURL(uri);
         }
 
     },
@@ -504,7 +504,7 @@ var wrtranslator = {
     /*
      * make CSS available
      */
-    loadCSS: function()
+    loadCSS: function ()
     {
         // https://developer.mozilla.org/en/Using_the_Stylesheet_Service
 
@@ -516,7 +516,7 @@ var wrtranslator = {
         sss.loadAndRegisterSheet(uri, sss.USER_SHEET);
     },
   
-    onLoad: function()
+    onLoad: function ()
     {
 
         // load css
@@ -539,15 +539,15 @@ var wrtranslator = {
 
         // listen context menu event
             // http://developer.mozilla.org/en/docs/XUL:PopupGuide:Extensions#Showing_and_Hiding_Context_Menu_Items
-        var contextMenu = wrt_tarApp.getContextMenu();
+        var contextMenu = wrtranslator_tarApp.getContextMenu();
         if (contextMenu)
             contextMenu.addEventListener("popupshowing",
-                    function(e) { wrtranslator.ContextShowHideItems(e); },
+                    function (e) { wrtranslator.ContextShowHideItems(e); },
                     false);
           
         // listen double click event
         document.addEventListener("dblclick", 
-               function(e) { wrtranslator.onDblClick(e); },
+               function (e) { wrtranslator.onDblClick(e); },
                false);
 
         // prefwindow-time consulted preferences
@@ -557,7 +557,7 @@ var wrtranslator = {
     },
 
 
-    onUnload: function()
+    onUnload: function ()
     {
         // unload event listeners
 
@@ -570,5 +570,6 @@ var wrtranslator = {
 };
 
 // https://developer.mozilla.org/en/DOM/element.addEventListener#Memory_issues
-window.addEventListener("load", function(e) { wrtranslator.onLoad(e); }, false);
-window.addEventListener("unload", function(e) { wrtranslator.onUnload(e); }, false);
+window.addEventListener("load", function (e) { wrtranslator.onLoad(e); }, false);
+window.addEventListener("unload", function (e) { wrtranslator.onUnload(e); }, false);
+

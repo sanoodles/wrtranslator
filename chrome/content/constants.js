@@ -6,7 +6,7 @@
  */
 
 /* original language */
-const wrt_lang1_list = [
+const wrtranslator_lang1_list = [
   "en","es",
   "en","fr",
   "en","it",
@@ -28,7 +28,7 @@ const wrt_lang1_list = [
 ];
 
 /* destination language */
-const wrt_lang2_list = [
+const wrtranslator_lang2_list = [
   "es","en",
   "fr","en",
   "it","en",
@@ -62,7 +62,7 @@ const wrt_lang2_list = [
  */
 
 /* translation path prefix */
-const wrt_urlspans_list = [
+const wrtranslator_urlspans_list = [
   "es/translation.asp?tranword=","es/en/translation.asp?spen=",
   "enfr/","fren/",
   "enit/","iten/",
