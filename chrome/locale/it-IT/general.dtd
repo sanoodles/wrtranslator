@@ -5,7 +5,7 @@ This localisation may be disastrous. Feedback to the author is always welcome.
 <!ENTITY wrtranslator.translate.accesskey "T">
 <!ENTITY wrtranslator.translateas.label "Tradurre come...">
 <!ENTITY wrtranslator.floatinglink.label "Allacci galleggiante">
-<!ENTITY wrtranslator.floatinglink.double "Facendo doppio click mostra allacci galleggiante">
+<!ENTITY wrtranslator.floatinglink.double "Doppio click per mostrare allacci galleggiante">
 
 <!ENTITY wrtranslator.options "Opzioni">
 <!ENTITY wrtranslator.language "Lingua">

@@ -5,7 +5,7 @@ This localisation may be disastrous. Feedback to the author is always welcome.
 <!ENTITY wrtranslator.translate.accesskey "T">
 <!ENTITY wrtranslator.translateas.label "Traduire comme...">
 <!ENTITY wrtranslator.floatinglink.label "Lien flottant">
-<!ENTITY wrtranslator.floatinglink.double "Au faire double clic il montre il lien flottant">
+<!ENTITY wrtranslator.floatinglink.double "Double clic pour montrer le lien flottant">
 
 <!ENTITY wrtranslator.options "Options">
 <!ENTITY wrtranslator.language "Langue">

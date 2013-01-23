@@ -2,7 +2,7 @@
 <!ENTITY wrtranslator.translate.accesskey "T">
 <!ENTITY wrtranslator.translateas.label "Traduze como...">
 <!ENTITY wrtranslator.floatinglink.label "Enlace flotante">
-<!ENTITY wrtranslator.floatinglink.double "Ao fazer duplo clique mostra o enlace flotante">
+<!ENTITY wrtranslator.floatinglink.double "Duplo clique para mostrar o enlace flotante">
 
 <!ENTITY wrtranslator.options "op&#184;&#227;o">
 <!ENTITY wrtranslator.language "Idioma">
