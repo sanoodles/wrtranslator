@@ -218,6 +218,10 @@ var wrtranslator = {
         return elem.getAttribute("type") == "password";
     },
 
+    /**
+     * @return Text selected in the page, whether it is in text form controls or not.
+     *    "" if there is no selected text.
+     */
     getSelectedText: function ()
     {
         // https://developer.mozilla.org/en/XUL_Tutorial/Focus_and_Selection
@@ -468,9 +472,7 @@ var wrtranslator = {
 
     /**
      * @section Main event
-     * (Click/Keypress on "Translate" chrome element)
-     *  if there is a word selected in the current tab, shows it in wordreference
-     *  else, if there is a word selected in a textbox in the current tab, shows it in wordreference.
+     *  if there is a word selected anywhere in the current tab, shows it in wordreference
      */
     onMenuItemCommand: function (event, _lang)
     {
