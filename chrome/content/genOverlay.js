@@ -211,7 +211,7 @@ var wrtranslator = {
         return res;
     },
 
-    elem_is_password: function (elem)
+    elemIsPassword: function (elem)
     {
         if (!elem.hasAttribute("type")) return false;
 
@@ -231,7 +231,7 @@ var wrtranslator = {
         // second attempt: try on currently focused firefox/thunderbird text box, if any
             // http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:String#Methods
         var elem = document.commandDispatcher.focusedElement;
-        if ((elem != null) && !this.elem_is_password(elem)) {
+        if ((elem != null) && !this.elemIsPassword(elem)) {
         
             var start = elem.selectionStart;
             var end = elem.selectionEnd;
