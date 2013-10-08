@@ -6,7 +6,7 @@ Contents/Contenidos:
 
 English:
 
-Get the WordReference's translation for the selected text.
+Quickly access the WordReference's translation page for the selected text.
 
 Compatible with Firefox and Thunderbird.
 
@@ -21,7 +21,7 @@ WordRefence Translator allows to access to the translation of the selected word 
 
 Castellano:
 
-Obtén la traducción de WordReference para el texto seleccionado.
+Accede rápidamente a la página de traducción de WordReference para el texto seleccionado.
 
 Compatible con Firefox y Thunderbird.
 
