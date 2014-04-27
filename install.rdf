@@ -34,7 +34,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>13.0</em:minVersion>
-        <em:maxVersion>18.0</em:maxVersion>
+        <em:maxVersion>28.0</em:maxVersion>
       </Description>
     </em:targetApplication>
 
@@ -43,7 +43,7 @@
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>13.0</em:minVersion>
-        <em:maxVersion>18.0</em:maxVersion>
+        <em:maxVersion>28.0</em:maxVersion>
       </Description>
     </em:targetApplication>
 
@@ -51,13 +51,13 @@
     <em:localized>
       <em:locale>en-US</em:locale>
       <em:description>
-        Get the WordReference translation for the selected word.
+        Open a new tab with WordReference's translation for the selected word. Through a floating link, or by pressing "D" key.
       </em:description>
     </em:localized>
     <em:localized>
       <em:locale>es-ES</em:locale>
       <em:description>
-        Obtén la traducción de WordReference para la palabra seleccionada.
+        Abre una nueva pestaña con la traducción de WordReference para la palabra seleccionada. Mediante un link flotante, o pulsando la tecla "D".
       </em:description>
     </em:localized>
     <em:creator>Samuel Gómez</em:creator>
