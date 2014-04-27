@@ -353,7 +353,12 @@ var wrtranslator = {
     hideFL: function ()
     {
         if (this.fl_body != null && this.fl != null) {
-            this.fl_body.removeChild(this.fl);
+            try {
+              this.fl_body.removeChild(this.fl);
+            } 
+            catch (ex) {
+              console.log("Exception on wrtranslator.hideFL, trying this.fl_body.removeChild(this.fl)");
+            }
             this.fl_body = null;
             this.fl = null;
         }
