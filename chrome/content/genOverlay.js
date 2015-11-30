@@ -369,7 +369,11 @@ var wrtranslator = {
      */
     setFLpos: function (div, event) {       
         div.style.left = event.clientX - 48 + "px";
-        div.style.top = event.clientY - wrtranslator_tarApp.FLvoffset + "px";
+        if ((event.clientY - wrtranslator_tarApp.FLvoffset) > 0) { // if it fits above the click
+          div.style.top = (event.clientY - wrtranslator_tarApp.FLvoffset) + "px";
+        } else {
+          div.style.top = (event.clientY + 16) + "px";
+        }
     },
     
     /*
