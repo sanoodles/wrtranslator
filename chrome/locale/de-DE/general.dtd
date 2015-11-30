@@ -1,8 +1,8 @@
 <!ENTITY wrtranslator.translate.label "Übersetzen">
 <!ENTITY wrtranslator.translate.accesskey "T">
-<!ENTITY wrtranslator.translateas.label "Übersetzen wie...">
+<!ENTITY wrtranslator.translateas.label "Übersetzen als...">
 <!ENTITY wrtranslator.floatinglink.label "Schwimmend Link">
-<!ENTITY wrtranslator.floatinglink.double "Doppelt klicken auf schwimmend Link zeigen">
+<!ENTITY wrtranslator.floatinglink.double "Doppelt klicken um schwimmend Link zu zeigen">
 
 <!ENTITY wrtranslator.options "Optionen">
 <!ENTITY wrtranslator.language "Sprache">
