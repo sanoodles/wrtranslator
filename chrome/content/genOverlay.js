@@ -30,7 +30,7 @@ var wrtranslatorPrefObserver = {
  * - Preferences
  * - URI to visit
  * - Selected text
- * - Context menu
+ * - Context Menu
  * - Floating link
  * - Status bar
  * - Main event
@@ -201,14 +201,11 @@ var wrtranslator = {
         // if there is a lot of text selected, this can delay the opening of the context menu
         // a selectionStart != selectionEnd approach would be (I think) more efficient
         res = document.commandDispatcher.focusedWindow.getSelection().toString() != "";
+        if (res) return true;
 
         // visible if there is selected text on a firefox textbox
         var elem = document.commandDispatcher.focusedElement;
-        if (elem != null) {
-            res = (elem.selectionStart != elem.selectionEnd); // pending to test in MAC OS X
-        }
-
-        return res;
+        return (elem != null) && (elem.selectionStart != elem.selectionEnd);
     },
 
     elemIsPassword: function (elem)
