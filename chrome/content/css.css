@@ -1,8 +1,7 @@
 #wrtranslator-translate {
     position: fixed !important;
-    z-index: 10000 !important;
+    z-index: 2147483000 !important; /* http://stackoverflow.com/questions/491052/minimum-and-maximum-value-of-z-index */
 }
-
 #wrtranslator-translate a {
     font-size: 14pt !important;
     color: blue !important;
@@ -18,3 +17,4 @@
 #wrtranslator-translate a:active {
     opacity: 0.8 !important;
 }
+
