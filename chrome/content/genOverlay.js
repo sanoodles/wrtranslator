@@ -30,7 +30,7 @@ var wrtranslatorPrefObserver = {
  * - Preferences
  * - URI to visit
  * - Selected text
- * - Context Menu
+ * - Context menu
  * - Floating link
  * - Status bar
  * - Main event
@@ -254,7 +254,7 @@ var wrtranslator = {
 
     /**
      *
-     * @section Context Menu
+     * @section Context menu
      *
      */
 
@@ -319,7 +319,7 @@ var wrtranslator = {
     },
 
     /*
-     * shows and hides the Context Menu items when appropiate
+     * shows and hides the Context menu items when appropiate
      */
     ContextShowHideItems: function (event)
     {
