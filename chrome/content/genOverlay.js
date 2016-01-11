@@ -294,11 +294,12 @@ var wrtranslator = {
                     "command",
 
                     // @see JavaScript The Good Parts 4.10 Closure
-                    function (lg) {
+                    function menuItemCommandListener (lg) {
 
                         // function with its own context (a different
                         // value for "lg" each time)
                         return function (e) {
+                            m.removeEventListener("command", menuItemCommandListener, false);
                             wrtranslator.onMenuItemCommand(e, lg);
                         }
                     }(lang),
@@ -523,7 +524,7 @@ var wrtranslator = {
         var uri = ios.newURI("chrome://wrtranslator/content/css.css", null, null);
         sss.loadAndRegisterSheet(uri, sss.USER_SHEET);
     },
-  
+
     onLoad: function ()
     {
 
@@ -549,9 +550,7 @@ var wrtranslator = {
             // http://developer.mozilla.org/en/docs/XUL:PopupGuide:Extensions#Showing_and_Hiding_Context_Menu_Items
         var contextMenu = wrtranslator_tarApp.getContextMenu();
         if (contextMenu)
-            contextMenu.addEventListener("popupshowing",
-                    function (e) { wrtranslator.ContextShowHideItems(e); },
-                    false);
+            contextMenu.addEventListener("popupshowing", wrtranslator.ContextShowHideItems, false);
           
         // listen double click event
         document.addEventListener("dblclick", 
@@ -568,6 +567,9 @@ var wrtranslator = {
     onUnload: function ()
     {
         // unload event listeners
+        var contextMenu = wrtranslator_tarApp.getContextMenu();
+        if (contextMenu)
+            contextMenu.removeEventListener("popupshowing", wrtranslator.ContextShowHideItems, false);
 
         // unload observers
         wrtranslatorPrefObserver.unregister();
