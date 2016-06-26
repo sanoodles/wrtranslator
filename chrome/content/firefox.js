@@ -16,7 +16,7 @@ var wrtranslator_tarApp = {
   
   OpenURL: function (url)
   {
-    gBrowser.selectedTab = gBrowser.addTab(url);
+    gBrowser.selectedTab = gBrowser.addTab(url, { relatedToCurrent: true });
   },
   
   // returns firefox context menu
